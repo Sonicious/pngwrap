@@ -23,3 +23,6 @@ add_subdirectory(pngwrap)
 # Test-Framework:
 enable_testing()
 add_subdirectory(tests)
+
+# Installation
+install(TARGETS pngwrap)
