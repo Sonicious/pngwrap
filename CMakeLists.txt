@@ -16,8 +16,6 @@ set(CMAKE_CXX_STANDARD 11)
 find_package(PNG REQUIRED)
 find_package(ZLIB REQUIRED)
 
-include_directories(pngwrap)
-
 add_subdirectory(pngwrap)
 
 # Test-Framework:
@@ -25,4 +23,4 @@ enable_testing()
 add_subdirectory(tests)
 
 # Installation
-install(TARGETS pngwrap)
+install(TARGETS pngwrap PUBLIC_HEADER)
