@@ -2,7 +2,7 @@
 #include <cstdlib>
 #include <cstring>
 
-#include "pngwrap.h"
+#include "pngwrap.hpp"
 
 int main(int argc, char const *argv[])
 {

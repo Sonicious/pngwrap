@@ -8,7 +8,7 @@
 #define PNG_SIG_BYTES 8
 #include <zlib.h>
 
-#include "pngwrap.h"
+#include "pngwrap.hpp"
 
 void readpng_version_info(void)
 {
