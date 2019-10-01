@@ -16,11 +16,17 @@ set(CMAKE_CXX_STANDARD 11)
 find_package(PNG REQUIRED)
 find_package(ZLIB REQUIRED)
 
-add_subdirectory(pngwrap)
+# pngwrap library
+add_library(pngwrap pngwrap.cpp)
+set_target_properties(pngwrap PROPERTIES PUBLIC_HEADER "pngwrap.h")
+target_link_libraries(pngwrap PNG::PNG ZLIB::ZLIB)
 
 # Test-Framework:
 enable_testing()
 add_subdirectory(tests)
 
 # Installation
-install(TARGETS pngwrap PUBLIC_HEADER)
+install(TARGETS pngwrap PUBLIC_HEADER
+  RUNTIME DESTINATION bin
+  LIBRARY DESTINATION lib
+)
