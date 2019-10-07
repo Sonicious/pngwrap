@@ -205,6 +205,5 @@ int imwrite(const char* filename, unsigned char* image, unsigned int width, unsi
     fclose(file_ptr);
     file_ptr = NULL;
 
-
     return PNG_WRAP_SUCCESS;
 }
